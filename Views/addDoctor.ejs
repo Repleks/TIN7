@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dodaj lekarza</title>
+</head>
+<body>
+<h1>Dodaj lekarza</h1>
+<form action="/doctors/add" method="POST">
+    <label>Imię: <input type="text" name="name" required></label><br>
+    <label>Nazwisko: <input type="text" name="surname" required></label><br>
+    <label>Specjalizacja: <input type="text" name="specialization" required></label><br>
+    <label>Wiek: <input type="number" name="age" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <button type="submit">Dodaj lekarza</button>
+</form>
+</body>
+</html>
