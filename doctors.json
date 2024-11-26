@@ -1,10 +1,18 @@
 [
   {
-    "id": 1732552882110,
-    "name": "Tomasz",
-    "surname": "Kowalski",
-    "specialization": "Dermatolog",
-    "age": 123,
-    "email": "tomasz@kowalski.pl"
+    "id": 1732635066876,
+    "imie": "Tomasz",
+    "nazwisko": "Kowalski",
+    "specjalizacja": "Dermatolog",
+    "wiek": 21,
+    "email": "piotrsuw03@gmail.com"
+  },
+  {
+    "id": 1732635131422,
+    "imie": "Jan",
+    "nazwisko": "Karwowski",
+    "specjalizacja": "Ornitolog",
+    "wiek": 40,
+    "email": "s28023@pjwstk.edu.pl"
   }
 ]

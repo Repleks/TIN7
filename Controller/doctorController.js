@@ -18,11 +18,11 @@ exports.showAddDoctorForm = (req, res) => {
 };
 
 exports.addDoctor = (req, res) => {
-    const { name, surname, specialization, age, email } = req.body;
-    if (!name || !surname || !specialization || !email || isNaN(age)) {
+    const { imie, nazwisko, specjalizacja, wiek, email } = req.body;
+    if (!imie || !nazwisko || !specjalizacja || !email || isNaN(wiek)) {
         return res.status(400).send('Niepoprawne dane.');
     }
-    const newDoctor = new Doctor(Date.now(), name, surname, specialization, parseInt(age), email);
+    const newDoctor = new Doctor(Date.now(), imie, nazwisko, specjalizacja, parseInt(wiek), email);
     addDoctor(newDoctor);
     res.redirect('/doctors');
 };

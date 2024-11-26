@@ -4,19 +4,19 @@ const path = require('path');
 const filePath = path.join(__dirname, '../doctors.json');
 
 class Doctor {
-    constructor(id, name, surname, specialization, age, email) {
+    constructor(id, imie, nazwisko, specjalizacja, wiek, email) {
         this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.specialization = specialization;
-        this.age = age;
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.specjalizacja = specjalizacja;
+        this.wiek = wiek;
         this.email = email;
     }
 }
 
 const getAllDoctors = () => {
     const data = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(data).map(doc => new Doctor(doc.id, doc.name, doc.surname, doc.specialization, doc.age, doc.email));
+    return JSON.parse(data).map(doctor => new Doctor(doctor.id, doctor.imie, doctor.nazwisko, doctor.specjalizacja, doctor.wiek, doctor.email));
 };
 
 const getDoctorById = (id) => {
