@@ -1,4 +1,4 @@
-const { getAllDoctors, getDoctorById, addDoctor } = require('../Model/doctorModel');
+const { Doctor, getAllDoctors, getDoctorById, addDoctor } = require('../Model/doctorModel');
 
 exports.listDoctors = (req, res) => {
     const doctors = getAllDoctors();
@@ -22,14 +22,7 @@ exports.addDoctor = (req, res) => {
     if (!name || !surname || !specialization || !email || isNaN(age)) {
         return res.status(400).send('Niepoprawne dane.');
     }
-    const newDoctor = {
-        id: Date.now(),
-        name,
-        surname,
-        specialization,
-        age: parseInt(age),
-        email
-    };
+    const newDoctor = new Doctor(Date.now(), name, surname, specialization, parseInt(age), email);
     addDoctor(newDoctor);
     res.redirect('/doctors');
 };
